@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCoverage.Console", "TestCoverage.Console\TestCoverage.Console.csproj", "{DFD58186-FA4E-4FFB-9731-4274D9310AA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCoverage.Test", "TestCoverage.Test\TestCoverage.Test.csproj", "{94F5968A-260F-4A42-95A7-6FB237516493}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFD58186-FA4E-4FFB-9731-4274D9310AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD58186-FA4E-4FFB-9731-4274D9310AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD58186-FA4E-4FFB-9731-4274D9310AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD58186-FA4E-4FFB-9731-4274D9310AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F5968A-260F-4A42-95A7-6FB237516493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F5968A-260F-4A42-95A7-6FB237516493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F5968A-260F-4A42-95A7-6FB237516493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F5968A-260F-4A42-95A7-6FB237516493}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B555121B-A409-4062-B062-840DB61E134F}
+	EndGlobalSection
+EndGlobal
