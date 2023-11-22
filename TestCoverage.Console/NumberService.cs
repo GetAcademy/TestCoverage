@@ -1,53 +1,56 @@
-﻿using System;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 
-namespace TestCoverage.Console
+namespace TestCoverage
 {
     public class NumberService
     {
-        private static string[] _names = "null,en,to,tre,fire,fem,feks,sju,åtte,ni".Split(',');
-        
-        public static string Process(int number)
+        static readonly string[] _names = "null,en,to,tre,fire,fem,feks,sju,åtte,ni".Split(',');
+
+        public static string Describe(int number)
         {
-            var sb = new StringBuilder(); // ok
+            var sb = new StringBuilder();
             try
             {
-                if (number % 2 == 0) // ok
+                if (number % 2 == 0)
                 {
-                    sb.AppendLine("Partall"); // ok
+                    sb.AppendLine("Partall");
                 }
                 else
                 {
-                    sb.AppendLine("Oddetall"); // ok
-                }
-                if (number < 10) // ok
-                {
-                    sb.AppendLine("Ett siffer"); // ok
-                }
-                else if (number < 100) // ok
-                {
-                    sb.AppendLine("To siffer"); // ok
-                }
-                else if (number < 1000) // ok
-                {
-                    sb.AppendLine("Tre siffer"); // ok
+                    sb.AppendLine("Oddetall");
                 }
 
-                var words = number //ok
-                    .ToString()
-                    .ToCharArray()
-                    .Select(c => _names[c - '0']);
+                if (number < 10)
+                {
+                    sb.AppendLine("Ett siffer");
+                }
+                else if (number < 100)
+                {
+                    sb.AppendLine("To siffer");
+                }
+                else if (number < 1000)
+                {
+                    sb.AppendLine("Tre siffer");
+                }
+                else
+                {
+                    sb.AppendLine("Mer enn tre siffer");
+                }
 
-                var txt = string.Join(' ', words); //ok
+                var words = number
+                        .ToString()
+                        .ToCharArray()
+                        .Select(c => _names[c - '0']);
+
+                var txt = string.Join(' ', words);
                 sb.AppendLine(txt);
             }
             catch (Exception)
             {
-                sb.AppendLine("Kan ikke gjøre om tall til ord");// ok
+                sb.AppendLine("Kan ikke gjøre om tallet til ord");
             }
 
-            return sb.ToString(); // ok
+            return sb.ToString();
         }
     }
 }

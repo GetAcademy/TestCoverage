@@ -1,32 +1,35 @@
-using NUnit.Framework;
-using TestCoverage.Console;
-
 namespace TestCoverage.Test
 {
     public class NumberServiceTest
     {
         [Test]
+        public void Test1()
+        {
+            NumberService.Describe(1);
+        }
+
+        [Test]
+        public void Test2()
+        {
+            NumberService.Describe(20);
+        }
+
+        [Test]
+        public void Test3()
+        {
+            NumberService.Describe(150);
+        }
+
+        [Test]
         public void Test4()
         {
-            NumberService.Process(4);
+            NumberService.Describe(1150);
         }
 
         [Test]
-        public void Test15()
+        public void Test5()
         {
-            NumberService.Process(15);
-        }
-
-        [Test]
-        public void Test150()
-        {
-            NumberService.Process(150);
-        }
-
-        [Test]
-        public void TestMinus()
-        {
-            NumberService.Process(-1);
+            NumberService.Describe(-1150);
         }
     }
 }
